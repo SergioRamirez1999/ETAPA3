@@ -1,0 +1,34 @@
+π nombre
+(
+	π email, nombre
+	(
+		(
+			π email, nombre
+			(
+				σ tipo_usuario='JUGADOR' (USUARIO)
+			)
+			⨝
+			π email, numero_reserva
+			(
+				σ resultado='PIERDE' (ASOCIA)
+			)
+		)
+	)
+	
+	-
+	
+	π email, nombre
+	(
+		(
+			π email, nombre
+			(
+				σ tipo_usuario='JUGADOR' (USUARIO)
+			)
+			⨝
+			π email, numero_reserva
+			(
+				σ resultado='GANA' (ASOCIA)
+			)
+		)
+	)
+)

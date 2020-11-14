@@ -1,0 +1,35 @@
+SEDE(nombre_sede, direccion)
+
+POSEE(numero_cancha, nombre_sede)
+
+CANCHA(numero_cancha, descripcion)
+
+TIENE_DISPONIBILIDAD(numero_cancha, fecha, hora_inicio)
+
+DISPONIBILIDAD(fecha, hora_inicio)
+
+DE_CANCHA_DISPONIBILIDAD(numero_reserva, numero_cancha, fecha, hora_inicio)
+
+RESERVA(numero_reserva)
+
+USUARIO(email, nombre, contraseña, tipo_usuario, puntos, promedio_goles)
+
+PAGO_TARJETA(numero_pago, fecha, monto, medio_de_pago)
+
+PAGO_EFECTIVO(numero_pago, fecha, monto)
+
+REALIZA_PAGO_TARJETA(numero_pago, email, numero_reserva)
+
+TIENE_PAGO_EFECTIVO(numero_pago, numero_reserva)
+
+ASOCIA(email, numero_reserva, resultado, goles)
+
+RESERVO(numero_reserva, email)
+
+CATEGORIA(nombre_categoria)
+
+TIENE_CATEGORIA(email, nombre_categoria)
+
+CATEGORIA_DESDE(dia, mes, año, hora, email, nombre_categoria)
+
+FECHA(dia, mes, año, hora)

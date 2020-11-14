@@ -1,0 +1,21 @@
+π email
+(
+	(
+		(
+			π email
+			(
+				σ tipo_usuario='JUGADOR' (USUARIO)
+			)
+			⨝
+			π email (RESERVO)
+		)
+		⨝
+		π email, numero_reserva (ASOCIA)
+	)
+	⨝
+	(
+		(REALIZA_PAGO_TARJETA)
+		⨝
+		π numero_pago (PAGO_TARJETA)
+	)
+)

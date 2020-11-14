@@ -1,0 +1,20 @@
+π email, numero_cancha
+(
+	(
+		π email 
+		(
+			σ tipo_usuario='JUGADOR' (USUARIO)
+		)
+		⨝
+		π email, numero_reserva (ASOCIA)
+	)
+	⨝
+	(
+		π numero_reserva, numero_cancha
+		(
+			DE_CANCHA_DISPONIBILIDAD
+		)
+	)
+)
+÷
+π numero_cancha (CANCHA)

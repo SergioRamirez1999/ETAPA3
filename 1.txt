@@ -1,0 +1,10 @@
+CANCHA
+-
+π numero_cancha, descripcion
+(
+	CANCHA
+	⨝
+	(
+		σ fecha='2/1/2020' (TIENE_DISPONIBILIDAD)
+	)
+)

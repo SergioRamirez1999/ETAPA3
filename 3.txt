@@ -1,0 +1,41 @@
+π email
+(
+	(
+		π email
+		(
+			σ tipo_usuario='JUGADOR' (USUARIO)
+		)
+		⨝
+		π email (ASOCIA)
+	)
+	⨝
+	(
+		π numero_pago, email (REALIZA_PAGO_TARJETA)
+		⨝
+		π numero_pago (
+			σ medio_de_pago='DEBITO' (PAGO_TARJETA)
+		)
+	)
+)
+
+-
+
+π email
+(
+	(
+		π email
+		(
+			σ tipo_usuario='JUGADOR' (USUARIO)
+		)
+		⨝
+		π email (ASOCIA)
+	)
+	⨝
+	(
+		π numero_pago, email (REALIZA_PAGO_TARJETA)
+		⨝
+		π numero_pago (
+			σ medio_de_pago<>'DEBITO' (PAGO_TARJETA)
+		)
+	)
+)

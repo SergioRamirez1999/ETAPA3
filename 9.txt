@@ -1,0 +1,9 @@
+π nombre_categoria
+(
+	σ anio=2020 AND mes=11 AND dia>=7 AND dia<=14 (FECHA)
+	⨝
+	π dia, mes, anio, hora, nombre_categoria
+	(
+		CATEGORIA_DESDE
+	)
+)
